@@ -1,7 +1,4 @@
 
-const exchangeRateUsdToVnd=23208;
-const exchangeRateEurToVnd=26229;
-const exchangeRateKrwToVnd=20;
 const currencyRatio = {
   vnd: {
     usd: 0.000043,
@@ -41,13 +38,17 @@ function formatCurrency(type, value) {
   return formatter.format(value);
 }
 function change(){
+
+  
   let from=document.getElementById('from').value.toLowerCase();
   let to=document.getElementById('to').value.toLowerCase();
   let result = amountInput.value;
+  if (result===""){
+    document.getElementById("result").innerHTML = `please write numbers again`;
+  }else{
   let convertedAmount = formatCurrency(to.toUpperCase(),result * currencyRatio[from][to]);
-
   document.getElementById("result").innerHTML = `${result} ${from.toUpperCase()} is ${convertedAmount}`;
-
+  }
 }
 
  function reverse(){
@@ -55,7 +56,6 @@ function change(){
   let to=document.getElementById('to').value;
   document.getElementById('to').value=from;
   document.getElementById('from').value=to;
-
  }
 let amountInput = document.getElementById('amount');
 
@@ -63,6 +63,8 @@ let convertButton= document.getElementById('convertButton');
 convertButton.addEventListener("click",change);
 let reverseButton=document.getElementById('btn-reverse');
 reverseButton.addEventListener("click",reverse);
+
+
 
 
 
