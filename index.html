@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body >  
+    <div class="container2">
+        <div class="container">
+            <div class="container3">
+                <div class="div1">
+                    <h3> amount</h3>
+                    <input type="number" id="amount" class="border" />
+                </div>
+                <div class="div1">
+                    <h3> from</h3>
+                    <select name="list" id="from" class="border">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                    <option value="KRW">KRW</option>
+                    <option value="EUR">EUR</option>
+                    </select>
+                </div>  
+                <div class="div1">
+                    <h3>change</h3>
+                    <button id="btn-reverse" >
+                       <img src="img1.jpg" class="img2"/>
+                    </button>                    
+                </div>  
+                <div class="div1">
+                    <h3> to</h3>
+                    <select name="list" id="to" class="border">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                    <option value="KRW">KRW</option>
+                    <option value="EUR">EUR</option>
+                    </select>
+                </div>
+                <div class="div1">
+                    <h3>click</h3>
+                    <button id="convertButton"  class="border">
+                       convert
+                    </button>                    
+                </div>
+            </div>  
+            <div> 
+                <span id="result" style="font-size:30px;"></span>
+            </div>
+            <div>
+                <p>All figures are live mid-market rates, which are not available to consumers and are for informational purposes only.</p>
+            </div>
+        </div>  
+        
+   </div>
+    
+    
+    
+    <script type="text/javascript" src="j.js"></script>
+    </script>
+</body>
+
+</html>
